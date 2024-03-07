@@ -4,7 +4,7 @@ const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPl
 module.exports = {
   mode: "development",
   devServer: {
-    port: 1000,
+    port: 3000,
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -17,9 +17,9 @@ module.exports = {
         // note1: "barchart_imp" in "barchart_imp:" needs to match the import defined in "bootstrap.js"
         // note2: "barchart_name" in "barchart_name@" needs to match the name defined
         //       in the webpack.config.js of the remote
-        barchart_imp: "barchart_name@http://localhost:1001/remoteEntry.js",
+        barchart_imp: "barchart_name@http://localhost:3001/remoteEntry.js",
         // Similar to above but for line chart
-        linechart_imp: "linechart_name@http://localhost:1002/remoteEntry.js",
+        linechart_imp: "linechart_name@http://localhost:3002/remoteEntry.js",
       },
     }),
   ],
