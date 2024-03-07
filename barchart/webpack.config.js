@@ -8,9 +8,10 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: "barchart",
+      name: "barchart_name",
       filename: "remoteEntry.js",
       exposes: {
+        // alias BarchartIndex to ./src/index
         "./BarchartIndex": "./src/index",
       },
     }),

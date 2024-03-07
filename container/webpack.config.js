@@ -14,7 +14,10 @@ module.exports = {
     new ModuleFederationPlugin({
       name: "container",
       remotes: {
-        barchart: "barchart@http://localhost:1001/remoteEntry.js",
+        // note1: "barchart_imp" in "barchart_imp:" needs to match the import defined in "bootstrap.js"
+        // note2: "barchart_name" in "barchart_name@" needs to match the name defined
+        //       in the webpack.config.js of the remote
+        barchart_imp: "barchart_name@http://localhost:1001/remoteEntry.js",
       },
     }),
   ],
