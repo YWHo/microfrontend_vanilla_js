@@ -18,6 +18,8 @@ module.exports = {
         // note2: "barchart_name" in "barchart_name@" needs to match the name defined
         //       in the webpack.config.js of the remote
         barchart_imp: "barchart_name@http://localhost:1001/remoteEntry.js",
+        // Similar to above but for line chart
+        linechart_imp: "linechart_name@http://localhost:1002/remoteEntry.js",
       },
     }),
   ],
